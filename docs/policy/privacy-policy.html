@@ -3,489 +3,825 @@
 <html lang="zh-Hant-TW">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+        body {
+            background: #FFD1B1;
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 50px;
+            padding-top: 40px;
+            padding-right: 50px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+        }
+
+        .button-tw {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 98px;
+            height: 36px;
+            border-radius: 50px;
+            color: #FFFFFF;
+            background-color: #FF8C3B;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .button-tw-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 98px;
+            height: 36px;
+            border-radius: 50px;
+            color: #262626;
+            background-color: #DDD6D6;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .button-tw-1:hover {
+            color: #FFFFFF;
+            background-color: #FF8C3B;
+        }
+
+        .button-tw-text {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .button-en {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 98px;
+            height: 36px;
+            border-radius: 50px;
+            color: #262626;
+            background-color: #DDD6D6;
+            cursor: pointer;
+        }
+
+        .button-en:hover {
+            color: #FFFFFF;
+            background-color: #FF8C3B;
+        }
+
+        .button-en-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 98px;
+            height: 36px;
+            border-radius: 50px;
+            color: #FFFFFF;
+            background-color: #FF8C3B;
+            cursor: pointer;
+        }
+
+        .button-en-text {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .button-back {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            color: #FF8C3B;
+            background-color: #FFF3EB;
+        }
+
+        .tw {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .en {
+            display: none;
+            flex-direction: column;
+        }
+
         .arrDown-line {
             width: 95%;
             height: 1px;
             border-top: solid black;
             margin: auto;
         }
+
+        @media (max-width: 800px) {
+            .title {
+                display: flex;
+                flex-direction: column;
+                /* 改為垂直排列 */
+                padding-left: 50px;
+                padding-top: 40px;
+                padding-right: 50px;
+                padding-bottom: 20px;
+            }
+
+            .button {
+                display: flex;
+                justify-content: start;
+                padding-top: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="fw-bold fs-1 p-5">
-        隱私權政策
+    <div id="button-back" class="button-back">
+        <i class="bi bi-arrow-up"></i>
     </div>
-    <div class="mx-auto fs-4 px-5">
-        歡迎您使用「FanFan應用程式」
-        （以下簡稱本APP），為了讓您能夠安心的使用本APP的各項服務與資訊，並協助您瞭解我們目前和未來會如何收集、使用、揭露及/或處理您提供給我們及/或我們所擁有和您有關的個人資料，特此向您說明本APP的會員隱私權保護政策，以保障您的權益，請您詳閱下列內容：
+    <div id="tw" class="tw">
+        <div class="title">
+            <div class="fw-bold fs-1">
+                隱私權政策
+            </div>
+            <div class="button">
+                <div class="button-tw">
+                    <div class="button-tw-text">
+                        繁體中文
+                    </div>
+                </div>
+                <div id="button-en" class="button-en">
+                    <div class="button-en-text">
+                        English
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto fs-4 px-5">
+            歡迎您使用「FanFan應用程式」
+            （以下簡稱本APP），為了讓您能夠安心的使用本APP的各項服務與資訊，並協助您瞭解我們目前和未來會如何收集、使用、揭露及/或處理您提供給我們及/或我們所擁有和您有關的個人資料，特此向您說明本APP的會員隱私權保護政策，以保障您的權益，請您詳閱下列內容：
+        </div>
+        <ol class="mx-5 fs-4 px-5 py-3" style="list-style:cjk-ideographic">
+            <li>
+                會員權益說明
+                <ol>
+                    <li>當您依據本APP加入會員程序註冊，並完成裝置綁定使用本APP相關服務時，即表示您已詳細閱讀、瞭解、同意接受與遵守本使用條款之所有內容。若您不同意本使用條款之所有內容，請停止繼續使用本APP提供之所有服務，否則將視為您接受本使用條款。
+                    </li>
+                    <li>本APP保留審核加入會員資格之權利，另外已加入會員者，本APP亦保留有解除或終止其會員資格之權利。</li>
+                    <li>
+                        您對個人資料的權益在本APP所保有行使下列權利：
+                        <ol style="list-style:none">
+                            <li>(1) 得向本APP查詢。</li>
+                            <li>(2) 請求制給複製本。</li>
+                            <li>(3) 得請求補充或更正，惟依法您應為適當之釋明。</li>
+                            <li>(4) 得向本APP請求刪除、停止搜集、處理或利用。</li>
+                            <li>(5) 在符合法律規定情形下，本APP得不依您請求為之。</li>
+                        </ol>
+                </ol>
+            </li>
+            <li class="py-3">
+                隱私權保護政策的適用範圍
+                <ol>
+                    <li>本隱私權政策適用於您在使用本公司所提供APP應用程式時，所涉及的個人資料蒐集、處理、運用、保護與國際傳輸等活動，包含：使用者名稱、性別、通訊地址、Email
+                        與聯絡電話，或其他您其後所同意本網站蒐集之個人資訊。</li>
+                    <li>隱私權保護政策不適用於本APP以外的相關連結網站，也不適用於非本APP所委託或參與管理的人員。</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                個人資料蒐集之目的、取得及利用方式
+                <ol>
+                    <li>本APP依照各服務之性質，將會收集您的姓名、聯絡方式（包含但不限於電話、Email 及地址等）、為完成收款或付款所需之資料、IP
+                        地址、所在地點及其他得以直接或間接辨識使用者身分之個人資料，都僅供本網站或本APP於其內部、依照蒐集之目的進行處理和利用、或為完成提供服務或履行合約義務之必要、或依照相關法令規定或有權政府機關之命令或要求，否則本APP不會將足以識別使用者身分的個人資料提供給第三人（包括境內及境外）、或移作蒐集目的以外之使用。
+                    </li>
+                    <li>本APP提供相關第三方認證服務的功能，第三方認證業者如Google、Apple等，讓您可以利用此功能，更快速地完成本網站的註冊與登入流程。</li>
+                    <li>
+                        本APP取得個人資料方式：
+                        <ol style="list-style:none">
+                            <li>(1)
+                                平台會員註冊：當您要註冊成為本APP會員時，需請您提供個人基本資訊。您得自由選擇是否提供個人資料給我們，但若特定資料欄位系屬必填欄位者，您若不提供該等資料，則無法使用相關的產品及服務。
+                            </li>
+                            <li>
+                                (2) 本APP獲取您的個人資料種類如下：
+                                <ol type="a">
+                                    <li>識別類-個人資料（例如：姓名、E-mail、行動電話、地址、本APP申請之帳號、相片。）</li>
+                                    <li>特徵類（例如：性別、出生年月日、語言）</li>
+                                </ol>
+                            </li>
+                            <li>(3) 本APP在您使用服務過程中收集的資訊
+                                在使用本APP服務時生成的資訊：例如追蹤者數量、每日觀看時間、喜好紀錄等。</li>
+                            <li>
+                                (4) 本APP將如何使用上述資訊：
+                                <ol type="a">
+                                    <li>提供、處理、維護、改善、開發我們的產品或提供給您的服務）。</li>
+                                    <li>處理您關於裝置與服務的提問或請求。</li>
+                                    <li>進行相關的推廣活動：例如提供推廣與促銷的資料和更新，您有權選擇接收或取消這些通知</li>
+                                </ol>
+                            </li>
+                            <li>(5) 內部目的：本APP、本公司及本公司相關企業、合作機構、數據分析公司爲進行統計、研究或提供其他服務，於必要時將匿名傳遞及利用數據。</li>
+                            <li>(6) 其他徵得您同意之目的：例如啟動、註冊您購買的產品或服務，提供基於位置的服務、推播服務、驗證用戶身份、發送通知等。</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="py-3">
+                會員註冊、註銷與使用
+                <ol>
+                    <li>使用本APP的服務項目，您需要創建一個受密碼保護的帳戶。要創建一個帳戶，您可以使用您現有的google、Apple帳戶和登入憑據（您的「第三方網站密碼」）或是直接於本APP另行註冊。
+                    </li>
+                    <li>使用第三方登入，您需全權負責隨時保護您的第三方網站密碼（統稱為「密碼」），並始終保護您的密碼安全。</li>
+                    <li>
+                        使用本APP所提供之會員服務時，您同意以下事項：
+                        <ol style="list-style:none">
+                            <li>(1) 依本APP「註冊」之欄位所給予之提示，提供您本人正確、最新及完整之資料。</li>
+                            <li>(2) 若您提供任何錯誤或不實之資料，本服務有權暫停或終止您的帳號，並拒絕您繼續使用本服務。</li>
+                            <li>(3) 如您未經他人授權或同意，使用他人之個人資料於本APP進行註冊並使用本服務，因而產生爭議，本APP不負任何責任。</li>
+                            <li>(4)
+                                您在本APP註冊後，可以隨時利用您所設定的帳號和密碼更改個人資料，登入之資料如有變更，請盡快於本APP更新個人資料。若因未更改所生任何損害，將由會員個人自行負責。
+                            </li>
+                            <li>(5) 長時間未使用之帳號，本APP有權關閉您的會員資料，如要重新啟用，請聯絡本服務客服單位協助處理。</li>
+                            <li>(6)
+                                若會員為未滿十八歲之未成年人，應於會員的家長（或監護人）閱讀、瞭解並同意本使用條款之所有內容及其後修改變更後，方得註冊為會員、使用或繼續使用本服務。當會員使用或繼續使用本服務時，即推定會員的家長（或監護人）已閱讀、瞭解並同意接受本使用條款之所有內容及其後修改變更。
+                            </li>
+                            <li>(7)
+                                會員帳號註銷：所有與個人資料除了金流相關的資訊將永久刪除，已刪除資料無法復原，原帳號之下未使用的Fan幣也將因此無法使用，Fan幣無法轉讓或退款，會員需於帳號註銷前自行確認Fan幣剩餘狀態。
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="py-3">
+                會員帳號、密碼及安全
+                <ol>
+                    <li>會員應妥善保管自己的帳戶及個人資料，不應將任何個人資料、帳號與登入資訊提供給任何人。依照服務流程輸入的用戶帳號及登入資料一致時，無論是否由會員本人親自輸入，均視為會員本人所使用，即使係遭盜用、不當使用或其他無法辨識是否為您本人親自使用之情況，本APP對此所生之損害，概不負責。
+                    </li>
+                    <li>會員之帳號及密碼遺失，或發現無故遭第三者盜用時，得立即通知本APP予以停權。但所造成的損失需由會員自行負擔。</li>
+                    <li>盜用第三者會員之帳號及密碼，導致第三者會員與本公司遭其他第三人或行政機關之調查或追訴時，第三者會員與本公司有權向盜用者請求損害賠償，包括但不限於訴訟費用、律師費及商譽損失等。</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                交易行為及Fan幣
+                <div class="mx-auto fs-4 py-2">
+                    會員使用本APP進行所有交易服務時，應依據本APP所提供之計費方式進行。
+                </div>
+            </li>
+            <li class="py-3">
+                對服務之授權
+                <div class="mx-auto fs-4 py-2">
+                    您所上載、傳送、輸入或提供予本APP之任何資料，其權利仍為您所有；但任何資料（包括但不限於個人資料與紀錄等）一經您上載、傳送、輸入或提供予本APP時，即表示您同意由本APP及本公司蒐集該資料，並由本APP及本公司進行處理，您事後不得以未曾授權為由，向本APP及本公司主張法律上損害賠償責任。
+                </div>
+            </li>
+            <li class="py-3">
+                資料之保護與保留
+                <ol>
+                    <li>本APP只由經過授權的人員才能接觸您的個人資料，如有違反保密義務者，將會受到相關的法律處分。
+                    </li>
+                    <li>如因業務需要有必要委託本APP相關單位提供服務時，本APP亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。</li>
+                    <li>個人資訊在完成收集目的，或在我們確認過您的刪除或註銷申請後，或我們終止營運相應產品或服務後，我們將停止保留，並做刪除或匿名化處理，相關資料一經刪除無法復原。</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                第三人網站連結
+                <ol>
+                    <li>為提供您使用上之便利，如您由本APP連結至第三人擁有或經營之網站（下稱「第三人網站」），在連結並使用第三人網站時，建議您應先行閱讀並決定是否同意第三人網站之使用條款，並予以遵守。
+                    </li>
+                    <li>本APP雖可連結至第三人網站，但並不表示本APP認同或認可第三人網站，或認同或認可與第三人網站有關之產品或服務。若您不信任第三人網站之內容，請您切勿使用。</li>
+                    <li>您於第三人網站上所進行之任何行為，包括但不限於線上報名、買賣、贈與、抽獎、接受服務等，均與本公司無關，本公司亦聲明絕不介入任何您與第三人網站間之任何行為。您如因於第三人網站所為之行為發生爭議，應向各該行為之相對人或服務提供者請求救濟。
+                    </li>
+                </ol>
+            </li>
+            <li class="py-3">
+                與第三人共用個人資料之政策
+                <div class="mx-auto fs-4 py-2">
+                    本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。
+                </div>
+                <div class="mx-auto fs-4 py-2">
+                    前項但書之情形包括不限於：
+                    <ul>
+                        <li>經由您同意。</li>
+                        <li>法律明文規定。</li>
+                        <li>為維護國家安全或增進公共利益。</li>
+                        <li>為免除您生命、身體、自由或財產上之危險。</li>
+                        <li>當您在本網站的行為，違反本網站的服務條款或可能損害或妨礙本網站權益或導致任何人遭受損害時，經本網站揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。</li>
+                        <li>有利於您的權益。</li>
+                        <li>本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="py-3">
+                拒絕或終止使用
+                <ol>
+                    <li>本APP基於自行考量，得因任何理由（包含但不限於一定時間未使用本APP、本APP無法繼續、服務內容實質變更、無法預期之技術、安全因素或問題，或其他本APP認為您已經違反本使用規則條款之明文規定及精神者），於通知或未通知之情形下，隨時終止您的帳號（或其任何部分）或本APP之使用。
+                    </li>
+                    <li>若平台使用被終止，本APP對您或其他第三人均不承擔任何責任。</li>
+                    <li>會員若欲停用本APP服務，需先至本APP確認剩餘Fan幣狀況，未使用Fan幣無法轉讓或退款，帳號刪除後相關數據皆無保留亦無法復原。</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                使用者的守法義務
+                <ol>
+                    <li>您使用本APP之一切行為必須符合當地或國際相關法令規範；對於使用者的一切行為，您須自行負擔全部責任。</li>
+                    <li>您同意絕不為非法之目的或以非法方式使用本APP，與確實遵守中華民國相關法規及網際網路之國際慣例，並保證不得利用本APP侵害他人權益或違法之行為，包括但不限於以下行為，如有違反，本APP有權暫停或終止您的帳號，並拒絕提供服務：
+                        <ol type="a">
+                            <li>有損他人人格或商標權、著作權等智慧財產權或其他權利內容。</li>
+                            <li>使用任何不實、粗俗、騷擾、侮辱、誹謗、猥褻、具威脅或攻擊性、違反公共秩序或善良風俗或其他不法之文字、圖片或任何形式的內容。</li>
+                            <li>強烈政治、宗教色彩的偏激言論。</li>
+                            <li>違反依法律或契約所應負之保密義務。</li>
+                            <li>冒用他人名義使用本服務。</li>
+                            <li>傳輸或散播電腦病毒。</li>
+                            <li>未經本公司許可，不得利用本APP所提供其他資源，包括但不限於圖文資料庫、編寫製作網頁之軟體等，從事任何商業交易行為或招攬廣告商或贊助人。</li>
+                            <li>其他違反本服務「會員服務條款」的內容。</li>
+                            <li>對本APP其他用戶或第三人產生困擾、不悅或違反一般網路禮節致生反感之行為。</li>
+                            <li>其他不符本APP所提供的使用目的之行為，或本APP有正當理由認為不適當之行為。</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="py-3">
+                系統中斷或故障
+                <div class="mx-auto fs-4 py-2">
+                    本APP將依一般合理之技術及方式，維持系統及服務之正常運作，本APP所提供之各項功能，均依該功能當時之現況提供使用，本APP對於其效能、速度、完整性、可靠性、安全性、正確性等，皆不負擔任何明示或默示之擔保責任。如本APP出現中斷或故障等現象，或許將造成您使用上之不便、資料喪失、錯誤、或其他非平台直接造成的經濟損失等情形。您於使用本APP時宜自行採取防護措施。對於您因使用（或無法使用）本APP而造成之損害，不負任何賠償責任。
+                </div>
+            </li>
+            <li class="py-3">
+                智財權保護
+                <ol>
+                    <li>本APP所使用之軟體或程式、以及於應用程式中所有內容，包括但不限於著作、圖片、檔案、資訊、資料、網站架構、網頁設計，均由本APP或其他權利人依法擁有其智慧財產權，包括但不限於商標權、專利權、著作權、營業秘密與專有技術等。任何人不得逕自使用、修改、重製、公開播送、改作、散布、發行、公開發表、進行還原工程、解編或反向組譯。
+                    </li>
+                    <li>若您欲引用或轉載前述軟體、程式或網站內容，必須依法取得本公司或其他權利人之事前書面同意。如有違反前述事項，因此造成本公司相關企業之損害者，本公司得向您主張法律上損害賠償責任。</li>
+                    <li>前項所稱損失，包括但不限於本公司之直接損失、間接損失，為請求損害賠償所支付之調查費用、律師費用以及訴訟費用等。</li>
+                    <li>使用者不得複製或散播本APP內之付費內容至外部。</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                修改權
+                <div class="mx-auto fs-4 py-2">
+                    當您開始使用本APP時，即表示您已充分閱讀、瞭解與同意接受本條款之內容。本公司有權於任何時間修改與變更本條款之內容，並將變更條款內容更新至本APP。如您於本條款修改與變更後仍繼續使用本APP，則視為您已閱讀、瞭解與同意接受本條款修改或變更。
+                </div>
+            </li>
+            <li class="py-3">
+                隱私權政策之修改
+                <div class="mx-auto fs-4 py-2">
+                    當隱私權政策有任何較明顯之更動時，本APP工作團隊將會在平台上公告。本APP保留修改以及變動的權利。
+                </div>
+            </li>
+            <li class="py-3">
+                聯絡我們
+                <div class="mx-auto fs-4 py-2">
+                    如果您對本隱私政策或是對我們收集、使用您的個人資訊有任何意見或問題，請透過官方Email：fanfan.a.squad@gmail.com 聯絡我們
+                </div>
+            </li>
+        </ol>
     </div>
-    <ol class="mx-5 fs-4 px-5 py-3" style="list-style:cjk-ideographic">
-        <li>
-            會員權益說明
-            <ol>
-                <li>當您依據本APP加入會員程序註冊，並完成裝置綁定使用本APP相關服務時，即表示您已詳細閱讀、瞭解、同意接受與遵守本使用條款之所有內容。若您不同意本使用條款之所有內容，請停止繼續使用本APP提供之所有服務，否則將視為您接受本使用條款。
-                </li>
-                <li>本APP保留審核加入會員資格之權利，另外已加入會員者，本APP亦保留有解除或終止其會員資格之權利。</li>
-                <li>
-                    您對個人資料的權益在本APP所保有行使下列權利：
-                    <ol style="list-style:none">
-                        <li>(1) 得向本APP查詢。</li>
-                        <li>(2) 請求制給複製本。</li>
-                        <li>(3) 得請求補充或更正，惟依法您應為適當之釋明。</li>
-                        <li>(4) 得向本APP請求刪除、停止搜集、處理或利用。</li>
-                        <li>(5) 在符合法律規定情形下，本APP得不依您請求為之。</li>
-                    </ol>
-            </ol>
-        </li>
-        <li class="py-3">
-            隱私權保護政策的適用範圍
-            <ol>
-                <li>本隱私權政策適用於您在使用本公司所提供APP應用程式時，所涉及的個人資料蒐集、處理、運用、保護與國際傳輸等活動，包含：使用者名稱、性別、通訊地址、Email
-                    與聯絡電話，或其他您其後所同意本網站蒐集之個人資訊。</li>
-                <li>隱私權保護政策不適用於本APP以外的相關連結網站，也不適用於非本APP所委託或參與管理的人員。</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            個人資料蒐集之目的、取得及利用方式
-            <ol>
-                <li>本APP依照各服務之性質，將會收集您的姓名、聯絡方式（包含但不限於電話、Email 及地址等）、為完成收款或付款所需之資料、IP
-                    地址、所在地點及其他得以直接或間接辨識使用者身分之個人資料，都僅供本網站或本APP於其內部、依照蒐集之目的進行處理和利用、或為完成提供服務或履行合約義務之必要、或依照相關法令規定或有權政府機關之命令或要求，否則本APP不會將足以識別使用者身分的個人資料提供給第三人（包括境內及境外）、或移作蒐集目的以外之使用。
-                </li>
-                <li>本APP提供相關第三方認證服務的功能，第三方認證業者如Google、Apple等，讓您可以利用此功能，更快速地完成本網站的註冊與登入流程。</li>
-                <li>
-                    本APP取得個人資料方式：
-                    <ol style="list-style:none">
-                        <li>(1)
-                            平台會員註冊：當您要註冊成為本APP會員時，需請您提供個人基本資訊。您得自由選擇是否提供個人資料給我們，但若特定資料欄位系屬必填欄位者，您若不提供該等資料，則無法使用相關的產品及服務。
-                        </li>
-                        <li>
-                            (2) 本APP獲取您的個人資料種類如下：
-                            <ol type="a">
-                                <li>識別類-個人資料（例如：姓名、E-mail、行動電話、地址、本APP申請之帳號、相片。）</li>
-                                <li>特徵類（例如：性別、出生年月日、語言）</li>
-                            </ol>
-                        </li>
-                        <li>(3) 本APP在您使用服務過程中收集的資訊
-                            在使用本APP服務時生成的資訊：例如追蹤者數量、每日觀看時間、喜好紀錄等。</li>
-                        <li>
-                            (4) 本APP將如何使用上述資訊：
-                            <ol type="a">
-                                <li>提供、處理、維護、改善、開發我們的產品或提供給您的服務）。</li>
-                                <li>處理您關於裝置與服務的提問或請求。</li>
-                                <li>進行相關的推廣活動：例如提供推廣與促銷的資料和更新，您有權選擇接收或取消這些通知</li>
-                            </ol>
-                        </li>
-                        <li>(5) 內部目的：本APP、本公司及本公司相關企業、合作機構、數據分析公司爲進行統計、研究或提供其他服務，於必要時將匿名傳遞及利用數據。</li>
-                        <li>(6) 其他徵得您同意之目的：例如啟動、註冊您購買的產品或服務，提供基於位置的服務、推播服務、驗證用戶身份、發送通知等。</li>
-                    </ol>
-                </li>
-            </ol>
-        </li>
-        <li class="py-3">
-            會員註冊、註銷與使用
-            <ol>
-                <li>使用本APP的服務項目，您需要創建一個受密碼保護的帳戶。要創建一個帳戶，您可以使用您現有的google、Apple帳戶和登入憑據（您的「第三方網站密碼」）或是直接於本APP另行註冊。</li>
-                <li>使用第三方登入，您需全權負責隨時保護您的第三方網站密碼（統稱為「密碼」），並始終保護您的密碼安全。</li>
-                <li>
-                    使用本APP所提供之會員服務時，您同意以下事項：
-                    <ol style="list-style:none">
-                        <li>(1) 依本APP「註冊」之欄位所給予之提示，提供您本人正確、最新及完整之資料。</li>
-                        <li>(2) 若您提供任何錯誤或不實之資料，本服務有權暫停或終止您的帳號，並拒絕您繼續使用本服務。</li>
-                        <li>(3) 如您未經他人授權或同意，使用他人之個人資料於本APP進行註冊並使用本服務，因而產生爭議，本APP不負任何責任。</li>
-                        <li>(4) 您在本APP註冊後，可以隨時利用您所設定的帳號和密碼更改個人資料，登入之資料如有變更，請盡快於本APP更新個人資料。若因未更改所生任何損害，將由會員個人自行負責。</li>
-                        <li>(5) 長時間未使用之帳號，本APP有權關閉您的會員資料，如要重新啟用，請聯絡本服務客服單位協助處理。</li>
-                        <li>(6)
-                            若會員為未滿十八歲之未成年人，應於會員的家長（或監護人）閱讀、瞭解並同意本使用條款之所有內容及其後修改變更後，方得註冊為會員、使用或繼續使用本服務。當會員使用或繼續使用本服務時，即推定會員的家長（或監護人）已閱讀、瞭解並同意接受本使用條款之所有內容及其後修改變更。
-                        </li>
-                        <li>(7)
-                            會員帳號註銷：所有與個人資料除了金流相關的資訊將永久刪除，已刪除資料無法復原，原帳號之下未使用的Fan幣也將因此無法使用，Fan幣無法轉讓或退款，會員需於帳號註銷前自行確認Fan幣剩餘狀態。
-                        </li>
-                    </ol>
-                </li>
-            </ol>
-        </li>
-        <li class="py-3">
-            會員帳號、密碼及安全
-            <ol>
-                <li>會員應妥善保管自己的帳戶及個人資料，不應將任何個人資料、帳號與登入資訊提供給任何人。依照服務流程輸入的用戶帳號及登入資料一致時，無論是否由會員本人親自輸入，均視為會員本人所使用，即使係遭盜用、不當使用或其他無法辨識是否為您本人親自使用之情況，本APP對此所生之損害，概不負責。
-                </li>
-                <li>會員之帳號及密碼遺失，或發現無故遭第三者盜用時，得立即通知本APP予以停權。但所造成的損失需由會員自行負擔。</li>
-                <li>盜用第三者會員之帳號及密碼，導致第三者會員與本公司遭其他第三人或行政機關之調查或追訴時，第三者會員與本公司有權向盜用者請求損害賠償，包括但不限於訴訟費用、律師費及商譽損失等。</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            交易行為及Fan幣
-            <div class="mx-auto fs-4 py-2">
-                會員使用本APP進行所有交易服務時，應依據本APP所提供之計費方式進行。
+    <div id="en" class="en">
+        <div class="title">
+            <div class="fw-bold fs-1">
+                Privacy Policy
             </div>
-        </li>
-        <li class="py-3">
-            對服務之授權
-            <div class="mx-auto fs-4 py-2">
-                您所上載、傳送、輸入或提供予本APP之任何資料，其權利仍為您所有；但任何資料（包括但不限於個人資料與紀錄等）一經您上載、傳送、輸入或提供予本APP時，即表示您同意由本APP及本公司蒐集該資料，並由本APP及本公司進行處理，您事後不得以未曾授權為由，向本APP及本公司主張法律上損害賠償責任。
+            <div class="button">
+                <div class="button-tw-1">
+                    <div id="button-tw" class="button-tw-text">
+                        繁體中文
+                    </div>
+                </div>
+                <div class="button-en-1">
+                    <div class="button-en-text">
+                        English
+                    </div>
+                </div>
             </div>
-        </li>
-        <li class="py-3">
-            資料之保護與保留
-            <ol>
-                <li>本APP只由經過授權的人員才能接觸您的個人資料，如有違反保密義務者，將會受到相關的法律處分。
-                </li>
-                <li>如因業務需要有必要委託本APP相關單位提供服務時，本APP亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。</li>
-                <li>個人資訊在完成收集目的，或在我們確認過您的刪除或註銷申請後，或我們終止營運相應產品或服務後，我們將停止保留，並做刪除或匿名化處理，相關資料一經刪除無法復原。</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            第三人網站連結
-            <ol>
-                <li>為提供您使用上之便利，如您由本APP連結至第三人擁有或經營之網站（下稱「第三人網站」），在連結並使用第三人網站時，建議您應先行閱讀並決定是否同意第三人網站之使用條款，並予以遵守。
-                </li>
-                <li>本APP雖可連結至第三人網站，但並不表示本APP認同或認可第三人網站，或認同或認可與第三人網站有關之產品或服務。若您不信任第三人網站之內容，請您切勿使用。</li>
-                <li>您於第三人網站上所進行之任何行為，包括但不限於線上報名、買賣、贈與、抽獎、接受服務等，均與本公司無關，本公司亦聲明絕不介入任何您與第三人網站間之任何行為。您如因於第三人網站所為之行為發生爭議，應向各該行為之相對人或服務提供者請求救濟。
-                </li>
-            </ol>
-        </li>
-        <li class="py-3">
-            與第三人共用個人資料之政策
-            <div class="mx-auto fs-4 py-2">
-                本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。
-            </div>
-            <div class="mx-auto fs-4 py-2">
-                前項但書之情形包括不限於：
-                <ul>
-                    <li>經由您同意。</li>
-                    <li>法律明文規定。</li>
-                    <li>為維護國家安全或增進公共利益。</li>
-                    <li>為免除您生命、身體、自由或財產上之危險。</li>
-                    <li>當您在本網站的行為，違反本網站的服務條款或可能損害或妨礙本網站權益或導致任何人遭受損害時，經本網站揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。</li>
-                    <li>有利於您的權益。</li>
-                    <li>本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。</li>
-                </ul>
-            </div>
-        </li>
-        <li class="py-3">
-            拒絕或終止使用
-            <ol>
-                <li>本APP基於自行考量，得因任何理由（包含但不限於一定時間未使用本APP、本APP無法繼續、服務內容實質變更、無法預期之技術、安全因素或問題，或其他本APP認為您已經違反本使用規則條款之明文規定及精神者），於通知或未通知之情形下，隨時終止您的帳號（或其任何部分）或本APP之使用。
-                </li>
-                <li>若平台使用被終止，本APP對您或其他第三人均不承擔任何責任。</li>
-                <li>會員若欲停用本APP服務，需先至本APP確認剩餘Fan幣狀況，未使用Fan幣無法轉讓或退款，帳號刪除後相關數據皆無保留亦無法復原。</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            使用者的守法義務
-            <ol>
-                <li>您使用本APP之一切行為必須符合當地或國際相關法令規範；對於使用者的一切行為，您須自行負擔全部責任。</li>
-                <li>您同意絕不為非法之目的或以非法方式使用本APP，與確實遵守中華民國相關法規及網際網路之國際慣例，並保證不得利用本APP侵害他人權益或違法之行為，包括但不限於以下行為，如有違反，本APP有權暫停或終止您的帳號，並拒絕提供服務：
-                    <ol type="a">
-                        <li>有損他人人格或商標權、著作權等智慧財產權或其他權利內容。</li>
-                        <li>使用任何不實、粗俗、騷擾、侮辱、誹謗、猥褻、具威脅或攻擊性、違反公共秩序或善良風俗或其他不法之文字、圖片或任何形式的內容。</li>
-                        <li>強烈政治、宗教色彩的偏激言論。</li>
-                        <li>違反依法律或契約所應負之保密義務。</li>
-                        <li>冒用他人名義使用本服務。</li>
-                        <li>傳輸或散播電腦病毒。</li>
-                        <li>未經本公司許可，不得利用本APP所提供其他資源，包括但不限於圖文資料庫、編寫製作網頁之軟體等，從事任何商業交易行為或招攬廣告商或贊助人。</li>
-                        <li>其他違反本服務「會員服務條款」的內容。</li>
-                        <li>對本APP其他用戶或第三人產生困擾、不悅或違反一般網路禮節致生反感之行為。</li>
-                        <li>其他不符本APP所提供的使用目的之行為，或本APP有正當理由認為不適當之行為。</li>
-                    </ol>
-                </li>
-            </ol>
-        </li>
-        <li class="py-3">
-            系統中斷或故障
-            <div class="mx-auto fs-4 py-2">
-                本APP將依一般合理之技術及方式，維持系統及服務之正常運作，本APP所提供之各項功能，均依該功能當時之現況提供使用，本APP對於其效能、速度、完整性、可靠性、安全性、正確性等，皆不負擔任何明示或默示之擔保責任。如本APP出現中斷或故障等現象，或許將造成您使用上之不便、資料喪失、錯誤、或其他非平台直接造成的經濟損失等情形。您於使用本APP時宜自行採取防護措施。對於您因使用（或無法使用）本APP而造成之損害，不負任何賠償責任。
-            </div>
-        </li>
-        <li class="py-3">
-            智財權保護
-            <ol>
-                <li>本APP所使用之軟體或程式、以及於應用程式中所有內容，包括但不限於著作、圖片、檔案、資訊、資料、網站架構、網頁設計，均由本APP或其他權利人依法擁有其智慧財產權，包括但不限於商標權、專利權、著作權、營業秘密與專有技術等。任何人不得逕自使用、修改、重製、公開播送、改作、散布、發行、公開發表、進行還原工程、解編或反向組譯。
-                </li>
-                <li>若您欲引用或轉載前述軟體、程式或網站內容，必須依法取得本公司或其他權利人之事前書面同意。如有違反前述事項，因此造成本公司相關企業之損害者，本公司得向您主張法律上損害賠償責任。</li>
-                <li>前項所稱損失，包括但不限於本公司之直接損失、間接損失，為請求損害賠償所支付之調查費用、律師費用以及訴訟費用等。</li>
-                <li>使用者不得複製或散播本APP內之付費內容至外部。</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            修改權
-            <div class="mx-auto fs-4 py-2">
-                當您開始使用本APP時，即表示您已充分閱讀、瞭解與同意接受本條款之內容。本公司有權於任何時間修改與變更本條款之內容，並將變更條款內容更新至本APP。如您於本條款修改與變更後仍繼續使用本APP，則視為您已閱讀、瞭解與同意接受本條款修改或變更。
-            </div>
-        </li>
-        <li class="py-3">
-            隱私權政策之修改
-            <div class="mx-auto fs-4 py-2">
-                當隱私權政策有任何較明顯之更動時，本APP工作團隊將會在平台上公告。本APP保留修改以及變動的權利。
-            </div>
-        </li>
-        <li class="py-3">
-            聯絡我們
-            <div class="mx-auto fs-4 py-2">
-                如果您對本隱私政策或是對我們收集、使用您的個人資訊有任何意見或問題，請透過官方Email：fanfan.a.squad@gmail.com 聯絡我們
-            </div>
-        </li>
-    </ol>
-    <div class="arrDown-line"></div>
-    <div class="fw-bold fs-1 p-5">
-        Privacy Policy
+        </div>
+        <div class="mx-auto fs-4 px-5">
+            Welcome to use the "FanFan Application" (hereinafter referred to as this APP). To ensure you can use the
+            various
+            services and information of this APP with peace of mind and to help you understand how we currently and in
+            the
+            future collect, use, disclose, and/or process the personal data you provide to us and/or we own related to
+            you,
+            we hereby explain the membership privacy protection policy of this APP to safeguard your rights. Please read
+            the
+            following content carefully:
+        </div>
+        <ol class="mx-5 fs-4 px-5 py-3" style="list-style:cjk-ideographic">
+            <li>
+                Membership Rights Explanation
+                <ol>
+                    <li>When you register according to the membership procedure of this APP and complete device binding
+                        to
+                        use the relevant services of this APP, you indicate that you have read, understood, agreed to
+                        accept, and comply with all the content of these terms of use. If you do not agree with all the
+                        content of these terms, please stop using all services provided by this APP. Otherwise, it will
+                        be
+                        deemed that you accept these terms.</li>
+                    <li>This APP reserves the right to review membership eligibility. Additionally, for existing
+                        members,
+                        this APP also reserves the right to revoke or terminate their membership.</li>
+                    <li>
+                        You have the following rights regarding personal data held by this APP:
+                        <ol style="list-style:none">
+                            <li>(1) You may inquire with this APP. </li>
+                            <li>(2) Request a copy.</li>
+                            <li>(3) Request supplementation or correction, provided you explain appropriately as
+                                required by
+                                law.</li>
+                            <li>(4) Request deletion, cessation of collection, processing, or use. </li>
+                            <li>(5) This APP may not comply with your request under legal circumstances.</li>
+                        </ol>
+                </ol>
+            </li>
+            <li class="py-3">
+                Scope of Privacy Protection Policy
+                <ol>
+                    <li>This privacy policy applies to the collection, processing, use, protection, and international
+                        transfer of personal data involved when you use the APP provided by the company, including: user
+                        names, gender, contact address, email, and contact phone numbers, or other personal information
+                        you
+                        subsequently consent to collect.</li>
+                    <li>This privacy policy does not apply to linked websites outside of this APP, nor does it apply to
+                        personnel not entrusted or involved in managing this APP.</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                Purpose, Acquisition, and Utilization of Personal Data
+                <ol>
+                    <li>According to the nature of each service, this APP will collect your name, contact information
+                        (including but not limited to phone, email, and address), data required for payment or
+                        collection,
+                        IP address, location, and other personal data that can directly or indirectly identify the user.
+                        This data will only be used internally by this APP or for processing and utilization according
+                        to
+                        the purpose of collection, or to fulfill service provision or contractual obligations, or as
+                        required by relevant laws or orders from authorized government agencies. Otherwise, this APP
+                        will
+                        not provide identifiable personal data to third parties (both domestic and international) or use
+                        it
+                        for purposes other than collection.</li>
+                    <li>This APP provides functions for third-party authentication services, such as Google, Apple,
+                        etc.,
+                        allowing you to complete registration and login processes more quickly.</li>
+                    <li>
+                        The methods of obtaining personal data by this APP include:
+                        <ol style="list-style:none">
+                            <li>(1) Platform membership registration: When you register to become a member of this APP,
+                                you
+                                need to provide basic personal information. You may choose whether or not to provide
+                                personal data, but if certain fields are required and you do not provide them, you will
+                                not
+                                be able to use the relevant products and services. </li>
+                            <li>
+                                (2) Types of personal data collected by this APP include:
+                                <ol type="a">
+                                    <li>Identification data – personal information (e.g., name, email, mobile phone,
+                                        address, account applied for on this APP, photo).</li>
+                                    <li>Characteristic data (e.g., gender, date of birth, language).</li>
+                                </ol>
+                            </li>
+                            <li>(3) Information collected during the use of services: - Information generated while
+                                using
+                                this APP’s services: e.g., number of followers, daily viewing time, preference records,
+                                etc.
+                            </li>
+                            <li>
+                                (4) How this APP will use the above information:
+                                <ol type="a">
+                                    <li>To provide, process, maintain, improve, and develop our products or services for
+                                        you.</li>
+                                    <li>To handle inquiries or requests regarding devices and services.</li>
+                                    <li>To conduct related promotional activities: e.g., provide promotional and sales
+                                        information and updates; you have the right to choose to receive or cancel these
+                                        notifications.</li>
+                                </ol>
+                            </li>
+                            <li>(5) Internal purposes: This APP, the company, and related companies, cooperation
+                                partners,
+                                data analysis companies will use anonymized data for statistics, research, or to provide
+                                other services as necessary. </li>
+                            <li>(6) Other purposes with your consent: e.g., to activate and register the products or
+                                services you purchased, provide location-based services, push notifications, verify user
+                                identity, send notifications, etc.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="py-3">
+                Membership Registration, Cancellation, and Use
+                <ol>
+                    <li>To use the services of this APP, you need to create a password-protected account. You can create
+                        an
+                        account using your existing Google or Apple account and login credentials (your "third-party
+                        website
+                        password") or register separately within this APP.</li>
+                    <li>When using third-party login, you are fully responsible for protecting your third-party website
+                        password (collectively "password") and ensuring its security at all times.</li>
+                    <li>
+                        When using membership services provided by this APP, you agree to the following:
+                        <ol style="list-style:none">
+                            <li>(1) Provide accurate, up-to-date, and complete information as prompted by the
+                                "registration"
+                                fields of this APP. </li>
+                            <li>(2) If you provide any incorrect or false information, this service has the right to
+                                suspend
+                                or terminate your account and refuse to continue providing the service.</li>
+                            <li>(3) f you use someone else's personal information to register and use the service
+                                without
+                                authorization or consent, this APP will not be liable for any disputes arising from it.
+                            </li>
+                            <li>(4) After registering on this APP, you can change personal information anytime using
+                                your
+                                set account and password. If login information changes, please update personal
+                                information
+                                in this APP as soon as possible. Any damages resulting from not updating will be the
+                                member’s responsibility.</li>
+                            <li>(5) Accounts that have not been used for a long time may be closed by this APP. To
+                                reactivate, please contact customer service for assistance. </li>
+                            <li>(6) If the member is a minor under eighteen years of age, the membership registration,
+                                use,
+                                or continued use of the service must be with the parent (or guardian)'s reading,
+                                understanding, and agreement to all terms of use and any subsequent modifications. When
+                                a
+                                member uses or continues to use the service, it is presumed that the member's parent (or
+                                guardian) has read, understood, and agreed to accept all terms and subsequent
+                                modifications.
+                            </li>
+                            <li>(7) Membership account cancellation: All personal data except for financial information
+                                will
+                                be permanently deleted. Deleted data cannot be restored, and unused Fan coins under the
+                                original account will also be unavailable. Fan coins cannot be transferred or refunded.
+                                Members must confirm the remaining Fan coins status before account cancellation.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="py-3">
+                Membership Account, Password, and Security
+                <ol>
+                    <li>Members should properly safeguard their accounts and personal data and should not provide any
+                        personal data, account, or login information to anyone. When the user account and login
+                        information
+                        input according to the service process match, it is considered as used by the member, even if it
+                        is
+                        misused or cannot be identified as personally used by the member. This APP is not responsible
+                        for
+                        any damage arising from this.
+                    </li>
+                    <li>If a member loses their account or password, or discovers unauthorized use by a third party,
+                        they
+                        should immediately notify this APP to suspend the account. However, any resulting losses must be
+                        borne by the member.</li>
+                    <li>In cases where a third party misuses another member's account and password, leading to
+                        investigations or legal actions by other third parties or administrative authorities, the
+                        third-party member and this company have the right to seek compensation from the infringer,
+                        including but not limited to litigation costs, legal fees, and reputational damage.</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                Transaction Behavior and Fan Coins
+                <div class="mx-auto fs-4 py-2">
+                    Members using this APP for all transaction services should follow the billing methods provided by
+                    this
+                    APP.
+                </div>
+            </li>
+            <li class="py-3">
+                Authorization of Service
+                <div class="mx-auto fs-4 py-2">
+                    Any data you upload, transmit, input, or provide to this APP remains your property; however, once
+                    any
+                    data (including but not limited to personal data and records) is uploaded, transmitted, input, or
+                    provided to this APP, you agree that this APP and the company may collect, process, and handle such
+                    data. You cannot later claim unauthorized use as a reason for legal damages against this APP and the
+                    company.
+                </div>
+            </li>
+            <li class="py-3">
+                Data Protection and Retention
+                <ol>
+                    <li>Only authorized personnel can access your personal data. Those violating confidentiality
+                        obligations
+                        will face relevant legal penalties.</li>
+                    <li>When necessary for business purposes, if this APP needs to entrust related units to provide
+                        services, this APP will strictly require them to comply with confidentiality obligations and
+                        implement necessary inspection procedures to ensure compliance.</li>
+                    <li>Personal information will be deleted or anonymized once the purpose of collection is fulfilled,
+                        or
+                        after confirming your deletion or cancellation request, or after we cease operations of the
+                        corresponding product or service. Deleted data cannot be restored.</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                Third-Party Website Links
+                <ol>
+                    <li>To provide you with convenience, if you are linked to a third-party-owned or operated website
+                        (hereinafter "third-party website") from this APP, it is recommended that you read and decide
+                        whether to agree to the third-party website’s terms of use and comply with them.</li>
+                    <li>Although this APP may link to third-party websites, it does not imply endorsement or approval of
+                        the
+                        third-party website or its related products or services. If you do not trust the content of
+                        third-party websites, please do not use them.</li>
+                    <li>Any actions you take on third-party websites, including but not limited to online registration,
+                        buying, giving away, lottery, or accepting services, are unrelated to this company. This company
+                        disclaims any involvement in any actions between you and third-party websites. Any disputes
+                        arising
+                        from actions on third-party websites should be resolved with the respective counterpart or
+                        service
+                        provider.</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                Policy on Sharing Personal Data with Third Parties
+                <div class="mx-auto fs-4 py-2">
+                    This website will not provide, exchange, lease, or sell any of your personal data to other
+                    individuals,
+                    groups, private enterprises, or public agencies, except as required by legal provisions or
+                    contractual
+                    obligations.
+                </div>
+                <div class="mx-auto fs-4 py-2">
+                    The exceptions to the above include but are not limited to:
+                    <ul>
+                        <li>With your consent.</li>
+                        <li>As mandated by law.</li>
+                        <li>To safeguard national security or enhance public interest.</li>
+                        <li>To prevent threats to your life, body, freedom, or property.</li>
+                        <li>When your behavior on this website violates the website's terms of service or may damage or
+                            hinder the website’s interests or cause harm to others, disclosure of your personal data by
+                            the
+                            website is necessary for identification, contact, or legal action.</li>
+                        <li>To benefit your interests.</li>
+                        <li>When the website entrusts third parties to assist in collecting, processing, or utilizing
+                            your
+                            personal data, the website will ensure proper oversight and management of the outsourced
+                            parties.</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="py-3">
+                Refusal or Termination of Use
+                <ol>
+                    <li>This APP reserves the right, at its sole discretion, to terminate your account (or any part of
+                        it)
+                        or the use of the APP for any reason (including but not limited to prolonged inactivity, the
+                        APP's
+                        inability to continue, substantial changes to service content, unforeseen technical or security
+                        issues, or any other reasons that the APP deems as violations of the usage rules and terms).
+                        This
+                        termination may occur with or without notice.
+                    </li>
+                    <li>If the use of the platform is terminated, this APP will not be liable to you or any third
+                        parties
+                        for any consequences.</li>
+                    <li>If a member wishes to discontinue the APP service, they must first check the remaining Fan Coins
+                        in
+                        the APP. Unused Fan Coins cannot be transferred or refunded, and all related data will be
+                        deleted
+                        and cannot be restored after account deletion.</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                User's Legal Obligations
+                <ol>
+                    <li>All actions you perform using this APP must comply with local or international laws and
+                        regulations.
+                        You are fully responsible for all your actions.</li>
+                    <li>You agree not to use this APP for illegal purposes or in illegal ways and to strictly adhere to
+                        the
+                        relevant regulations of the Republic of China (Taiwan) and international internet practices. You
+                        also guarantee not to use this APP to infringe on others' rights or engage in illegal
+                        activities,
+                        including but not limited to the following behaviors. In case of violation, this APP reserves
+                        the
+                        right to suspend or terminate your account and refuse to provide services:
+                        <ol type="a">
+                            <li>Damaging others' personal or trademark rights, copyright, intellectual property rights,
+                                or
+                                other rights.</li>
+                            <li>Using any false, vulgar, harassing, insulting, defamatory, obscene, threatening, or
+                                offensive content, or content that violates public order, good morals, or other illegal
+                                content. </li>
+                            <li>Extreme political or religious statements. d. Breaching confidentiality obligations
+                                imposed
+                                by law or contract.</li>
+                            <li>Breaching confidentiality obligations imposed by law or contract. </li>
+                            <li>Impersonating others to use the service.</li>
+                            <li>Transmitting or spreading computer viruses.</li>
+                            <li>Without the company’s permission, using other resources provided by this APP, including
+                                but
+                                not limited to image and text databases, webpage creation software, for any commercial
+                                transactions or solicitation of advertisers or sponsors.</li>
+                            <li>Other violations of the "Member Service Terms" of this service.</li>
+                            <li>Actions that cause distress, displeasure, or violate general internet etiquette towards
+                                other users of this APP or third parties.</li>
+                            <li>Other actions that are inconsistent with the intended use of this APP or actions deemed
+                                inappropriate by this APP for valid reasons.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li class="py-3">
+                System Interruptions or Failures
+                <div class="mx-auto fs-4 py-2">
+                    This APP will maintain system and service operations using generally reasonable technical means and
+                    methods. The functions provided by this APP are available as is, and the APP does not warrant any
+                    express or implied guarantees regarding their performance, speed, completeness, reliability,
+                    security,
+                    or accuracy. If there are system interruptions or failures, it may cause inconvenience, data loss,
+                    errors, or other economic losses not directly caused by the platform. You should take your own
+                    protective measures while using this APP. The APP will not be liable for any damages caused by the
+                    use
+                    (or inability to use) of this APP.
+                </div>
+            </li>
+            <li class="py-3">
+                Intellectual Property Protection
+                <ol>
+                    <li>The software or programs used by this APP, as well as all content within the application,
+                        including
+                        but not limited to works, images, files, information, data, website structure, and webpage
+                        design,
+                        are legally owned by this APP or other rights holders, including but not limited to trademarks,
+                        patents, copyrights, trade secrets, and proprietary technologies. No one may use, modify,
+                        reproduce,
+                        publicly broadcast, adapt, distribute, issue, publicly display, decompile, or reverse engineer
+                        them
+                        without authorization.
+                    </li>
+                    <li>If you wish to cite or reproduce the aforementioned software, programs, or website content, you
+                        must
+                        obtain prior written consent from the company or other rights holders. If any violation of the
+                        aforementioned matters causes damage to the company or related enterprises, the company may
+                        claim
+                        legal damages from you.</li>
+                    <li>The term "losses" includes but is not limited to the company's direct losses, indirect losses,
+                        investigation costs, attorney fees, and litigation costs incurred in claiming damages.</li>
+                    <li>Users may not copy or distribute paid content within this APP to external parties.</li>
+                </ol>
+            </li>
+            <li class="py-3">
+                Modification Rights
+                <div class="mx-auto fs-4 py-2">
+                    By beginning to use this APP, you signify that you have read, understood, and agreed to the terms of
+                    this agreement. The company reserves the right to modify and change these terms at any time and will
+                    update the modified terms in the APP. If you continue to use this APP after the terms have been
+                    modified
+                    or changed, it will be deemed that you have read, understood, and agreed to the modifications or
+                    changes
+                    to the terms.
+                </div>
+            </li>
+            <li class="py-3">
+                Modifications to Privacy Policy
+                <div class="mx-auto fs-4 py-2">
+                    When there are significant changes to the privacy policy, the APP team will announce them on the
+                    platform. The APP reserves the right to make modifications and changes.
+                </div>
+            </li>
+            <li class="py-3">
+                Contact Us
+                <div class="mx-auto fs-4 py-2">
+                    If you have any comments or questions about this privacy policy or about how we collect and use your
+                    personal information, please contact us via the official email: fanfan.a.squad@gmail.com.
+                </div>
+            </li>
+        </ol>
     </div>
-    <div class="mx-auto fs-4 px-5">
-        Welcome to use the "FanFan Application" (hereinafter referred to as this APP). To ensure you can use the various
-        services and information of this APP with peace of mind and to help you understand how we currently and in the
-        future collect, use, disclose, and/or process the personal data you provide to us and/or we own related to you,
-        we hereby explain the membership privacy protection policy of this APP to safeguard your rights. Please read the
-        following content carefully:
-    </div>
-    <ol class="mx-5 fs-4 px-5 py-3" style="list-style:cjk-ideographic">
-        <li>
-            Membership Rights Explanation
-            <ol>
-                <li>When you register according to the membership procedure of this APP and complete device binding to
-                    use the relevant services of this APP, you indicate that you have read, understood, agreed to
-                    accept, and comply with all the content of these terms of use. If you do not agree with all the
-                    content of these terms, please stop using all services provided by this APP. Otherwise, it will be
-                    deemed that you accept these terms.</li>
-                <li>This APP reserves the right to review membership eligibility. Additionally, for existing members,
-                    this APP also reserves the right to revoke or terminate their membership.</li>
-                <li>
-                    You have the following rights regarding personal data held by this APP:
-                    <ol style="list-style:none">
-                        <li>(1) You may inquire with this APP. </li>
-                        <li>(2) Request a copy.</li>
-                        <li>(3) Request supplementation or correction, provided you explain appropriately as required by
-                            law.</li>
-                        <li>(4) Request deletion, cessation of collection, processing, or use. </li>
-                        <li>(5) This APP may not comply with your request under legal circumstances.</li>
-                    </ol>
-            </ol>
-        </li>
-        <li class="py-3">
-            Scope of Privacy Protection Policy
-            <ol>
-                <li>This privacy policy applies to the collection, processing, use, protection, and international
-                    transfer of personal data involved when you use the APP provided by the company, including: user
-                    names, gender, contact address, email, and contact phone numbers, or other personal information you
-                    subsequently consent to collect.</li>
-                <li>This privacy policy does not apply to linked websites outside of this APP, nor does it apply to
-                    personnel not entrusted or involved in managing this APP.</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            Purpose, Acquisition, and Utilization of Personal Data
-            <ol>
-                <li>According to the nature of each service, this APP will collect your name, contact information
-                    (including but not limited to phone, email, and address), data required for payment or collection,
-                    IP address, location, and other personal data that can directly or indirectly identify the user.
-                    This data will only be used internally by this APP or for processing and utilization according to
-                    the purpose of collection, or to fulfill service provision or contractual obligations, or as
-                    required by relevant laws or orders from authorized government agencies. Otherwise, this APP will
-                    not provide identifiable personal data to third parties (both domestic and international) or use it
-                    for purposes other than collection.</li>
-                <li>This APP provides functions for third-party authentication services, such as Google, Apple, etc.,
-                    allowing you to complete registration and login processes more quickly.</li>
-                <li>
-                    The methods of obtaining personal data by this APP include:
-                    <ol style="list-style:none">
-                        <li>(1) Platform membership registration: When you register to become a member of this APP, you
-                            need to provide basic personal information. You may choose whether or not to provide
-                            personal data, but if certain fields are required and you do not provide them, you will not
-                            be able to use the relevant products and services. </li>
-                        <li>
-                            (2) Types of personal data collected by this APP include:
-                            <ol type="a">
-                                <li>Identification data – personal information (e.g., name, email, mobile phone,
-                                    address, account applied for on this APP, photo).</li>
-                                <li>Characteristic data (e.g., gender, date of birth, language).</li>
-                            </ol>
-                        </li>
-                        <li>(3) Information collected during the use of services: - Information generated while using
-                            this APP’s services: e.g., number of followers, daily viewing time, preference records, etc.
-                        </li>
-                        <li>
-                            (4) How this APP will use the above information:
-                            <ol type="a">
-                                <li>To provide, process, maintain, improve, and develop our products or services for
-                                    you.</li>
-                                <li>To handle inquiries or requests regarding devices and services.</li>
-                                <li>To conduct related promotional activities: e.g., provide promotional and sales
-                                    information and updates; you have the right to choose to receive or cancel these
-                                    notifications.</li>
-                            </ol>
-                        </li>
-                        <li>(5) Internal purposes: This APP, the company, and related companies, cooperation partners,
-                            data analysis companies will use anonymized data for statistics, research, or to provide
-                            other services as necessary. </li>
-                        <li>(6) Other purposes with your consent: e.g., to activate and register the products or
-                            services you purchased, provide location-based services, push notifications, verify user
-                            identity, send notifications, etc.</li>
-                    </ol>
-                </li>
-            </ol>
-        </li>
-        <li class="py-3">
-            Membership Registration, Cancellation, and Use
-            <ol>
-                <li>To use the services of this APP, you need to create a password-protected account. You can create an
-                    account using your existing Google or Apple account and login credentials (your "third-party website
-                    password") or register separately within this APP.</li>
-                <li>When using third-party login, you are fully responsible for protecting your third-party website
-                    password (collectively "password") and ensuring its security at all times.</li>
-                <li>
-                    When using membership services provided by this APP, you agree to the following:
-                    <ol style="list-style:none">
-                        <li>(1) Provide accurate, up-to-date, and complete information as prompted by the "registration"
-                            fields of this APP. </li>
-                        <li>(2) If you provide any incorrect or false information, this service has the right to suspend
-                            or terminate your account and refuse to continue providing the service.</li>
-                        <li>(3) f you use someone else's personal information to register and use the service without
-                            authorization or consent, this APP will not be liable for any disputes arising from it.
-                        </li>
-                        <li>(4) After registering on this APP, you can change personal information anytime using your
-                            set account and password. If login information changes, please update personal information
-                            in this APP as soon as possible. Any damages resulting from not updating will be the
-                            member’s responsibility.</li>
-                        <li>(5) Accounts that have not been used for a long time may be closed by this APP. To
-                            reactivate, please contact customer service for assistance. </li>
-                        <li>(6) If the member is a minor under eighteen years of age, the membership registration, use,
-                            or continued use of the service must be with the parent (or guardian)'s reading,
-                            understanding, and agreement to all terms of use and any subsequent modifications. When a
-                            member uses or continues to use the service, it is presumed that the member's parent (or
-                            guardian) has read, understood, and agreed to accept all terms and subsequent modifications.
-                        </li>
-                        <li>(7) Membership account cancellation: All personal data except for financial information will
-                            be permanently deleted. Deleted data cannot be restored, and unused Fan coins under the
-                            original account will also be unavailable. Fan coins cannot be transferred or refunded.
-                            Members must confirm the remaining Fan coins status before account cancellation.</li>
-                    </ol>
-                </li>
-            </ol>
-        </li>
-        <li class="py-3">
-            Membership Account, Password, and Security
-            <ol>
-                <li>Members should properly safeguard their accounts and personal data and should not provide any personal data, account, or login information to anyone. When the user account and login information input according to the service process match, it is considered as used by the member, even if it is misused or cannot be identified as personally used by the member. This APP is not responsible for any damage arising from this.
-                </li>
-                <li>If a member loses their account or password, or discovers unauthorized use by a third party, they should immediately notify this APP to suspend the account. However, any resulting losses must be borne by the member.</li>
-                <li>In cases where a third party misuses another member's account and password, leading to investigations or legal actions by other third parties or administrative authorities, the third-party member and this company have the right to seek compensation from the infringer, including but not limited to litigation costs, legal fees, and reputational damage.</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            Transaction Behavior and Fan Coins
-            <div class="mx-auto fs-4 py-2">
-                Members using this APP for all transaction services should follow the billing methods provided by this APP.
-            </div>
-        </li>
-        <li class="py-3">
-            Authorization of Service
-            <div class="mx-auto fs-4 py-2">
-                Any data you upload, transmit, input, or provide to this APP remains your property; however, once any data (including but not limited to personal data and records) is uploaded, transmitted, input, or provided to this APP, you agree that this APP and the company may collect, process, and handle such data. You cannot later claim unauthorized use as a reason for legal damages against this APP and the company.
-            </div>
-        </li>
-        <li class="py-3">
-            Data Protection and Retention
-            <ol>
-                <li>Only authorized personnel can access your personal data. Those violating confidentiality obligations will face relevant legal penalties.</li>
-                <li>When necessary for business purposes, if this APP needs to entrust related units to provide services, this APP will strictly require them to comply with confidentiality obligations and implement necessary inspection procedures to ensure compliance.</li>
-                <li>Personal information will be deleted or anonymized once the purpose of collection is fulfilled, or after confirming your deletion or cancellation request, or after we cease operations of the corresponding product or service. Deleted data cannot be restored.</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            Third-Party Website Links
-            <ol>
-                <li>To provide you with convenience, if you are linked to a third-party-owned or operated website (hereinafter "third-party website") from this APP, it is recommended that you read and decide whether to agree to the third-party website’s terms of use and comply with them.</li>
-                <li>Although this APP may link to third-party websites, it does not imply endorsement or approval of the third-party website or its related products or services. If you do not trust the content of third-party websites, please do not use them.</li>
-                <li>Any actions you take on third-party websites, including but not limited to online registration, buying, giving away, lottery, or accepting services, are unrelated to this company. This company disclaims any involvement in any actions between you and third-party websites. Any disputes arising from actions on third-party websites should be resolved with the respective counterpart or service provider.</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            Policy on Sharing Personal Data with Third Parties
-            <div class="mx-auto fs-4 py-2">
-                This website will not provide, exchange, lease, or sell any of your personal data to other individuals, groups, private enterprises, or public agencies, except as required by legal provisions or contractual obligations.
-            </div>
-            <div class="mx-auto fs-4 py-2">
-                The exceptions to the above include but are not limited to:
-                <ul>
-                    <li>With your consent.</li>
-                    <li>As mandated by law.</li>
-                    <li>To safeguard national security or enhance public interest.</li>
-                    <li>To prevent threats to your life, body, freedom, or property.</li>
-                    <li>When your behavior on this website violates the website's terms of service or may damage or hinder the website’s interests or cause harm to others, disclosure of your personal data by the website is necessary for identification, contact, or legal action.</li>
-                    <li>To benefit your interests.</li>
-                    <li>When the website entrusts third parties to assist in collecting, processing, or utilizing your personal data, the website will ensure proper oversight and management of the outsourced parties.</li>
-                </ul>
-            </div>
-        </li>
-        <li class="py-3">
-            Refusal or Termination of Use
-            <ol>
-                <li>This APP reserves the right, at its sole discretion, to terminate your account (or any part of it) or the use of the APP for any reason (including but not limited to prolonged inactivity, the APP's inability to continue, substantial changes to service content, unforeseen technical or security issues, or any other reasons that the APP deems as violations of the usage rules and terms). This termination may occur with or without notice.
-                </li>
-                <li>If the use of the platform is terminated, this APP will not be liable to you or any third parties for any consequences.</li>
-                <li>If a member wishes to discontinue the APP service, they must first check the remaining Fan Coins in the APP. Unused Fan Coins cannot be transferred or refunded, and all related data will be deleted and cannot be restored after account deletion.</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            User's Legal Obligations
-            <ol>
-                <li>All actions you perform using this APP must comply with local or international laws and regulations. You are fully responsible for all your actions.</li>
-                <li>You agree not to use this APP for illegal purposes or in illegal ways and to strictly adhere to the relevant regulations of the Republic of China (Taiwan) and international internet practices. You also guarantee not to use this APP to infringe on others' rights or engage in illegal activities, including but not limited to the following behaviors. In case of violation, this APP reserves the right to suspend or terminate your account and refuse to provide services:
-                    <ol type="a">
-                        <li>Damaging others' personal or trademark rights, copyright, intellectual property rights, or other rights.</li>
-                        <li>Using any false, vulgar, harassing, insulting, defamatory, obscene, threatening, or offensive content, or content that violates public order, good morals, or other illegal content. </li>
-                        <li>Extreme political or religious statements. d. Breaching confidentiality obligations imposed by law or contract.</li>
-                        <li>Breaching confidentiality obligations imposed by law or contract. </li>
-                        <li>Impersonating others to use the service.</li>
-                        <li>Transmitting or spreading computer viruses.</li>
-                        <li>Without the company’s permission, using other resources provided by this APP, including but not limited to image and text databases, webpage creation software, for any commercial transactions or solicitation of advertisers or sponsors.</li>
-                        <li>Other violations of the "Member Service Terms" of this service.</li>
-                        <li>Actions that cause distress, displeasure, or violate general internet etiquette towards other users of this APP or third parties.</li>
-                        <li>Other actions that are inconsistent with the intended use of this APP or actions deemed inappropriate by this APP for valid reasons.</li>
-                    </ol>
-                </li>
-            </ol>
-        </li>
-        <li class="py-3">
-            System Interruptions or Failures
-            <div class="mx-auto fs-4 py-2">
-                This APP will maintain system and service operations using generally reasonable technical means and methods. The functions provided by this APP are available as is, and the APP does not warrant any express or implied guarantees regarding their performance, speed, completeness, reliability, security, or accuracy. If there are system interruptions or failures, it may cause inconvenience, data loss, errors, or other economic losses not directly caused by the platform. You should take your own protective measures while using this APP. The APP will not be liable for any damages caused by the use (or inability to use) of this APP.
-            </div>
-        </li>
-        <li class="py-3">
-            Intellectual Property Protection
-            <ol>
-                <li>The software or programs used by this APP, as well as all content within the application, including but not limited to works, images, files, information, data, website structure, and webpage design, are legally owned by this APP or other rights holders, including but not limited to trademarks, patents, copyrights, trade secrets, and proprietary technologies. No one may use, modify, reproduce, publicly broadcast, adapt, distribute, issue, publicly display, decompile, or reverse engineer them without authorization.
-                </li>
-                <li>If you wish to cite or reproduce the aforementioned software, programs, or website content, you must obtain prior written consent from the company or other rights holders. If any violation of the aforementioned matters causes damage to the company or related enterprises, the company may claim legal damages from you.</li>
-                <li>The term "losses" includes but is not limited to the company's direct losses, indirect losses, investigation costs, attorney fees, and litigation costs incurred in claiming damages.</li>
-                <li>Users may not copy or distribute paid content within this APP to external parties.</li>
-            </ol>
-        </li>
-        <li class="py-3">
-            Modification Rights
-            <div class="mx-auto fs-4 py-2">
-                By beginning to use this APP, you signify that you have read, understood, and agreed to the terms of this agreement. The company reserves the right to modify and change these terms at any time and will update the modified terms in the APP. If you continue to use this APP after the terms have been modified or changed, it will be deemed that you have read, understood, and agreed to the modifications or changes to the terms.
-            </div>
-        </li>
-        <li class="py-3">
-            Modifications to Privacy Policy
-            <div class="mx-auto fs-4 py-2">
-                When there are significant changes to the privacy policy, the APP team will announce them on the platform. The APP reserves the right to make modifications and changes.
-            </div>
-        </li>
-        <li class="py-3">
-            Contact Us
-            <div class="mx-auto fs-4 py-2">
-                If you have any comments or questions about this privacy policy or about how we collect and use your personal information, please contact us via the official email: fanfan.a.squad@gmail.com.
-            </div>
-        </li>
-    </ol>
 </body>
 
 </html>
+
+<script>
+    document.getElementById('button-tw').addEventListener('click', function () {
+        // 隱藏 en 的 div
+        document.getElementById('en').style.display = 'none';
+
+        // 顯示 tw 的 div
+        document.getElementById('tw').style.display = 'flex';
+    });
+
+    document.getElementById('button-en').addEventListener('click', function () {
+        // 隱藏 en 的 div
+        document.getElementById('tw').style.display = 'none';
+
+        // 顯示 tw 的 div
+        document.getElementById('en').style.display = 'flex';
+    });
+
+    document.getElementById('button-back').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
