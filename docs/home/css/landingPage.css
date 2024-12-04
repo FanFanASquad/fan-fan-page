@@ -1,0 +1,1190 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* 第一區 */
+/* Fanfan Logo Text */
+.fanfanLogoAndText {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 20vw;
+    height: 5vw;
+    margin-left: 8vw;
+    margin-top: 2vw;
+}
+
+.fanfanLogo {
+    width: 3vw;
+    height: 4vw;
+}
+
+.fanfanText {
+    margin-left: 0.5vw;
+    font-size: 2.5vw;
+    font-family: 'Poller One';
+    color: #262626;
+}
+
+/* circle */
+.block1 {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+/* Yellow circle */
+.yellowCircle {
+    background-color: #F6CA07;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    filter: blur(50px);
+    margin-left: -20vw;
+}
+
+/* Orange circle */
+.orangeCircle {
+    background-color: #FF8C3B;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    filter: blur(100px);
+    margin-right: -20vw;
+}
+
+/* phone */
+.phoneLeft {
+    position: absolute;
+    width: 30vw;
+    height: 45vw;
+    top: 5vw;
+    left: 5vw;
+    z-index: 1;
+}
+
+.phoneRight {
+    position: absolute;
+    width: 29vw;
+    height: 45vw;
+    top: 5vw;
+    right: 1vw;
+    z-index: 1;
+}
+
+/* 線 */
+.line {
+    position: absolute;
+    width: 50vw;
+    height: 2vw;
+    top: 22vw;
+    left: 25.5vw;
+    z-index: 1;
+}
+
+/* FanFan 拉近球星與粉絲的距離 */
+.fanfanBigText {
+    position: absolute;
+    font-size: 5vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 13.5vw;
+    left: 40vw;
+    z-index: 1;
+}
+
+.fanfanFansText {
+    position: absolute;
+    font-size: 4vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 25vw;
+    left: 30vw;
+    z-index: 1;
+}
+
+/* Google Apple */
+.google {
+    position: absolute;
+    width: 12vw;
+    top: 33vw;
+    left: 50vw;
+    z-index: 1;
+}
+
+.apple {
+    position: absolute;
+    width: 12vw;
+    top: 33vw;
+    left: 35vw;
+    z-index: 1;
+}
+
+/* 星星 */
+.star1 {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    top: 3vw;
+    left: 3vw;
+    z-index: 1;
+}
+
+.star2 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    top: 42.5vw;
+    right: 12vw;
+    transform: rotate(100deg);
+    z-index: 1;
+}
+
+/* 第二區 */
+/* circle */
+.block2 {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+/* Yellow circle */
+.yellowCircle1 {
+    position: absolute;
+    background-color: #F6CA07;
+    width: 25vw;
+    height: 15vw;
+    border-radius: 50%;
+    filter: blur(50px);
+    top: 4vw;
+    left: 10vw;
+    z-index: 0;
+}
+
+/* Orange circle */
+.orangeCircle1 {
+    position: absolute;
+    background-color: #FF8C3B;
+    width: 25vw;
+    height: 15vw;
+    border-radius: 50%;
+    filter: blur(100px);
+    top: 11vw;
+    left: 12vw;
+    z-index: 0;
+}
+
+/* circle line */
+.circleLine {
+    position: absolute;
+    width: 32.5vw;
+    height: 22.5vw;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 7vw;
+    left: 12vw;
+    transform: rotate(50deg);
+    z-index: 1;
+}
+
+/* circle line1 */
+.circleLine1 {
+    position: absolute;
+    width: 32.5vw;
+    height: 22.5vw;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 9vw;
+    left: 10vw;
+    transform: rotate(50deg);
+    z-index: 1;
+}
+
+/* 星星 */
+.star3 {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    top: 3vw;
+    left: 3vw;
+    z-index: 1;
+}
+
+/* phone */
+.phoneLeft1 {
+    position: absolute;
+    width: 30vw;
+    height: 45vw;
+    left: 17.5vw;
+    z-index: 2;
+}
+
+.phoneLeftPlayer {
+    position: absolute;
+    width: 18vw;
+    top: 7.5vw;
+    left: 12.5vw;
+    z-index: 2;
+}
+
+/* 特色功能 */
+.featuresText {
+    position: absolute;
+    font-size: 2vw;
+    font-family: 'Noto Sans TC';
+    color: #FF8C3B;
+    top: 12vw;
+    left: 50vw;
+    z-index: 1;
+}
+
+/* 球星消息即時呈現 */
+.nowShowText {
+    position: absolute;
+    font-size: 3vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 15.5vw;
+    left: 50vw;
+    z-index: 1;
+}
+
+/* 由球星自主發佈的文字、圖片、影片、商品、直播、獨處等創作，無需加入各種討論群組或平台，FanFan讓你第一時間即時擁有喜愛球星的最新消息。 */
+.detailText {
+    position: absolute;
+    width: 40vw;
+    font-size: 1.5vw;
+    font-family: 'Noto Sans TC';
+    color: #989595;
+    top: 20vw;
+    left: 50vw;
+    z-index: 1;
+}
+
+/* 第三區 */
+.block3 {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+/* 星星 */
+.star4 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    top: 3vw;
+    right: 3vw;
+    transform: rotate(100deg);
+    z-index: 1;
+}
+
+/* 獨家功能 */
+.exclusiveText {
+    position: absolute;
+    font-size: 2vw;
+    font-family: 'Noto Sans TC';
+    color: #FF8C3B;
+    top: 20vw;
+    left: 8vw;
+    z-index: 1;
+}
+
+/* 獲得與球星的獨處機會 */
+.exclusiveWithPlayerText {
+    position: absolute;
+    font-size: 3vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 23.5vw;
+    left: 8vw;
+    z-index: 1;
+}
+
+/* 使用 Fan 幣參加抽獎，即有機會獲得與球星的線上一對一獨處機會，內建翻譯功能讓你語言不同聊天也能通，拉近你與球星更加緊密靠近。*/
+.exclusiveDetailText {
+    position: absolute;
+    width: 40vw;
+    font-size: 1.5vw;
+    font-family: 'Noto Sans TC';
+    color: #989595;
+    top: 28vw;
+    left: 8vw;
+    z-index: 1;
+}
+
+/* Yellow circle */
+.yellowCircle2 {
+    position: absolute;
+    background-color: #F6CA07;
+    width: 25vw;
+    height: 15vw;
+    border-radius: 50%;
+    filter: blur(50px);
+    top: 25vw;
+    right: 12vw;
+    z-index: 0;
+}
+
+/* Orange circle */
+.orangeCircle2 {
+    position: absolute;
+    background-color: #FF8C3B;
+    width: 25vw;
+    height: 15vw;
+    border-radius: 50%;
+    filter: blur(100px);
+    top: 30vw;
+    right: 10vw;
+    z-index: 0;
+}
+
+/* circle line */
+.circleLine2 {
+    position: absolute;
+    width: 32.5vw;
+    height: 22.5vw;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 13vw;
+    left: 55vw;
+    transform: rotate(50deg);
+    z-index: 1;
+}
+
+/* circle line */
+.circleLine3 {
+    position: absolute;
+    width: 32.5vw;
+    height: 22.5vw;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 15vw;
+    left: 53vw;
+    transform: rotate(50deg);
+    z-index: 1;
+}
+
+/* phone */
+.phoneright1 {
+    position: absolute;
+    width: 30vw;
+    height: 45vw;
+    top: 7.5vw;
+    left: 60vw;
+    z-index: 2;
+}
+
+.phonerightPlayer1 {
+    position: absolute;
+    width: 25vw;
+    top: 16.5vw;
+    left: 65vw;
+    z-index: 2;
+}
+
+/* 星星 */
+.star5 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    top: 40vw;
+    left: 3vw;
+    transform: rotate(100deg);
+    z-index: 1;
+}
+
+/* 第四區 */
+.block4 {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+/* 星星 */
+.star6 {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    left: 45vw;
+    z-index: 1;
+}
+
+.star7 {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    top: 32vw;
+    left: 43vw;
+    z-index: 1;
+}
+
+.star8 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    top: 12.5vw;
+    right: 3vw;
+    transform: rotate(100deg);
+    z-index: 1;
+}
+
+/* 方框 */
+.rectangle {
+    position: absolute;
+    width: 81vw;
+    height: 27vw;
+    background-color: #FFD1B1;
+    border-radius: 20px;
+    top: 10vw;
+    left: 10vw;
+    z-index: 1;
+}
+
+/* 最新優惠 */
+.newDiscountText {
+    position: absolute;
+    font-size: 2vw;
+    font-family: 'Noto Sans TC';
+    color: #FF8C3B;
+    top: 17.5vw;
+    left: 15vw;
+    z-index: 2;
+}
+
+/* 立即下載 FanFan */
+.downloadText {
+    position: absolute;
+    font-size: 2vw;
+    width: 18vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 20.5vw;
+    left: 15vw;
+    z-index: 1;
+}
+
+/* 免費獲得 200 Fan幣 */
+.downloadText1 {
+    position: absolute;
+    font-size: 2vw;
+    width: 20vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 23.5vw;
+    left: 15vw;
+    z-index: 1;
+}
+
+/* Google Apple */
+.google1 {
+    position: absolute;
+    width: 8vw;
+    top: 28vw;
+    left: 25vw;
+    z-index: 1;
+}
+
+.apple1 {
+    position: absolute;
+    width: 8vw;
+    top: 28vw;
+    left: 15vw;
+    z-index: 1;
+}
+
+/* circle line */
+.circleLine4 {
+    position: absolute;
+    width: 35.5vw;
+    height: 25.5vw;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 9vw;
+    left: 52vw;
+    transform: rotate(50deg);
+    clip-path: ellipse(47.5% 50% at 35% 95%);
+    z-index: 1;
+}
+
+/* circle line */
+.circleLine5 {
+    position: absolute;
+    width: 35.5vw;
+    height: 25.5vw;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 11vw;
+    left: 50vw;
+    transform: rotate(50deg);
+    clip-path: ellipse(50% 50% at 20% 95%);
+    z-index: 1;
+}
+
+/* circle line */
+.circleLine6 {
+    position: absolute;
+    width: 35.5vw;
+    height: 25.5vw;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 9vw;
+    left: 58vw;
+    transform: rotate(50deg);
+    clip-path: ellipse(50% 10% at 85% 5%);
+    z-index: 1;
+}
+
+/* circle line */
+.circleLine7 {
+    position: absolute;
+    width: 35.5vw;
+    height: 25.5vw;
+    border-radius: 50%;
+    border: 1px solid;
+    top: 11vw;
+    left: 54vw;
+    transform: rotate(50deg);
+    clip-path: ellipse(47.5% 50% at 75% 5%);
+    z-index: 1;
+}
+
+/* phone */
+.phonebottom {
+    position: absolute;
+    width: 20vw;
+    height: 22.5vw;
+    top: 14.5vw;
+    left: 65vw;
+    z-index: 2;
+}
+
+.logoIcon1 {
+    position: absolute;
+    width: 3.5vw;
+    height: 5vw;
+    top: 23vw;
+    left: 75.5vw;
+    z-index: 2;
+}
+
+/* line */
+.copyRightLine {
+    position: absolute;
+    width: 81vw;
+    border: 0.5px solid;
+    top: 40vw;
+    left: 10vw;
+    z-index: 1;
+}
+
+/* Copyright 2024 FanFan all rights reserved */
+.copyRightText {
+    position: absolute;
+    font-size: 1.5vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 42.5vw;
+    left: 35vw;
+    z-index: 1;
+}
+
+/* 英文 */
+.fanfanLogoAndTextEn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 20vw;
+    height: 5vw;
+    margin-left: 8vw;
+    margin-top: 2vw;
+}
+
+.fanfanFansTextEn {
+    position: absolute;
+    font-size: 3vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 24vw;
+    left: 35vw;
+    z-index: 1;
+}
+
+.fanfanFansText1En {
+    position: absolute;
+    font-size: 3vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 28vw;
+    left: 30vw;
+    z-index: 1;
+}
+
+.detailTextEn {
+    position: absolute;
+    width: 40vw;
+    font-size: 1.5vw;
+    font-family: 'Noto Sans TC';
+    color: #989595;
+    top: 20vw;
+    left: 50vw;
+    z-index: 1;
+}
+
+.exclusiveWithPlayerTextEn {
+    position: absolute;
+    width: 45vw;
+    font-size: 3vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 23.5vw;
+    left: 8vw;
+    z-index: 1;
+}
+
+.exclusiveDetailTextEn {
+    position: absolute;
+    width: 39.5vw;
+    font-size: 1.5vw;
+    font-family: 'Noto Sans TC';
+    color: #989595;
+    top: 32vw;
+    left: 8vw;
+    z-index: 1;
+}
+
+.downloadTextEn {
+    position: absolute;
+    font-size: 2vw;
+    width: 25vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 20.5vw;
+    left: 15vw;
+    z-index: 1;
+}
+
+.downloadText1En {
+    position: absolute;
+    font-size: 2vw;
+    width: 25vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 23.5vw;
+    left: 15vw;
+    z-index: 1;
+}
+
+@media (max-width: 800px) {
+
+    /* 第一區 */
+    /* Fanfan Logo Text */
+    .fanfanLogoAndText {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 20vw;
+        height: 5vw;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .fanfanLogo {
+        width: 3vw;
+        height: 4vw;
+    }
+
+    .fanfanText {
+        margin-left: 0.5vw;
+        font-size: 2.5vw;
+        font-family: 'Poller One';
+        color: #262626;
+    }
+
+    .block1 {
+        display: flex;
+        justify-content: space-between;
+        height: 50vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .line {
+        position: absolute;
+        width: 50vw;
+        height: 10vw;
+        top: 22vw;
+        left: 25.5vw;
+        z-index: 1;
+        content: url('../img/Red\ Graph1.png');
+    }
+
+    .fanfanBigText {
+        position: absolute;
+        font-size: 5vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 45vw;
+        left: 40vw;
+        z-index: 1;
+    }
+
+    .fanfanFansText {
+        position: absolute;
+        font-size: 4vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 52.5vw;
+        left: 30vw;
+        z-index: 1;
+    }
+
+    .google {
+        position: absolute;
+        width: 30vw;
+        top: 62.5vw;
+        left: 52vw;
+        z-index: 1;
+    }
+
+    .apple {
+        position: absolute;
+        width: 30vw;
+        top: 62.5vw;
+        left: 18vw;
+        z-index: 1;
+    }
+
+    .star2 {
+        position: absolute;
+        width: 4vw;
+        height: 4vw;
+        top: 42.5vw;
+        right: 12vw;
+        transform: rotate(100deg);
+        z-index: 1;
+    }
+
+    .block2 {
+        display: flex;
+        height: 50vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .yellowCircle1 {
+        position: absolute;
+        background-color: #F6CA07;
+        width: 30vw;
+        height: 25vw;
+        border-radius: 50%;
+        filter: blur(50px);
+        top: 4vw;
+        left: 25vw;
+        z-index: 0;
+    }
+
+    .orangeCircle1 {
+        position: absolute;
+        background-color: #FF8C3B;
+        width: 30vw;
+        height: 25vw;
+        border-radius: 50%;
+        filter: blur(100px);
+        top: 11vw;
+        left: 30vw;
+        z-index: 0;
+    }
+
+    .circleLine {
+        position: absolute;
+        width: 45vw;
+        height: 30vw;
+        border-radius: 50%;
+        border: 1px solid;
+        top: 8vw;
+        left: 30vw;
+        transform: rotate(50deg);
+        z-index: 1;
+    }
+
+    .circleLine1 {
+        position: absolute;
+        width: 45vw;
+        height: 30vw;
+        border-radius: 50%;
+        border: 1px solid;
+        top: 12vw;
+        left: 25vw;
+        transform: rotate(50deg);
+        z-index: 1;
+    }
+
+    .star3 {
+        position: absolute;
+        width: 8vw;
+        height: 8vw;
+        left: 15vw;
+        z-index: 1;
+    }
+
+    .phoneLeft1 {
+        position: absolute;
+        width: 42.5vw;
+        height: 65vw;
+        left: 35vw;
+        z-index: 2;
+    }
+
+    .phoneLeftPlayer {
+        position: absolute;
+        width: 25vw;
+        top: 10vw;
+        left: 30vw;
+        z-index: 2;
+    }
+
+    .featuresText {
+        position: absolute;
+        font-size: 5vw;
+        font-family: 'Noto Sans TC';
+        color: #FF8C3B;
+        top: 60vw;
+        left: 10vw;
+        z-index: 1;
+    }
+
+    .nowShowText {
+        position: absolute;
+        font-size: 7vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 68vw;
+        left: 10vw;
+        z-index: 1;
+    }
+
+    .detailText {
+        position: absolute;
+        width: 80vw;
+        font-size: 4vw;
+        font-family: 'Noto Sans TC';
+        color: #989595;
+        top: 77.5vw;
+        left: 10vw;
+        z-index: 1;
+    }
+
+    .block3 {
+        display: flex;
+        height: 50vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .star4 {
+        position: absolute;
+        width: 8vw;
+        height: 8vw;
+        top: 5vw;
+        right: 3vw;
+        transform: rotate(200deg);
+        z-index: 1;
+    }
+
+    .phoneright1 {
+        position: absolute;
+        width: 42.5vw;
+        height: 65vw;
+        top: 8vw;
+        left: 35vw;
+        z-index: 2;
+    }
+
+    .phonerightPlayer1 {
+        position: absolute;
+        width: 30vw;
+        top: 22vw;
+        left: 42.5vw;
+        z-index: 2;
+    }
+
+    .circleLine2 {
+        position: absolute;
+        width: 45vw;
+        height: 30vw;
+        border-radius: 50%;
+        border: 1px solid;
+        top: 16vw;
+        left: 30vw;
+        transform: rotate(50deg);
+        z-index: 1;
+    }
+
+    .circleLine3 {
+        position: absolute;
+        width: 45vw;
+        height: 30vw;
+        border-radius: 50%;
+        border: 1px solid;
+        top: 20vw;
+        left: 25vw;
+        transform: rotate(50deg);
+        z-index: 1;
+    }
+
+    .exclusiveText {
+        position: absolute;
+        font-size: 5vw;
+        font-family: 'Noto Sans TC';
+        color: #FF8C3B;
+        top: 62vw;
+        left: 10vw;
+        z-index: 1;
+    }
+
+    .exclusiveWithPlayerText {
+        position: absolute;
+        font-size: 7vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 70vw;
+        left: 10vw;
+        z-index: 1;
+    }
+
+    .exclusiveDetailText {
+        position: absolute;
+        width: 80vw;
+        font-size: 4vw;
+        font-family: 'Noto Sans TC';
+        color: #989595;
+        top: 79vw;
+        left: 10vw;
+        z-index: 1;
+    }
+
+    .block4 {
+        display: flex;
+        height: 50vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .star6 {
+        display: none;
+    }
+
+    .star7 {
+        display: none;
+    }
+
+    .star8 {
+        display: none;
+    }
+
+    .rectangle {
+        position: absolute;
+        width: 80vw;
+        height: 120vw;
+        background-color: #FFD1B1;
+        border-radius: 20px;
+        top: 10vw;
+        left: 10vw;
+        z-index: 1;
+    }
+
+    .newDiscountText {
+        position: absolute;
+        font-size: 5vw;
+        font-family: 'Noto Sans TC';
+        color: #FF8C3B;
+        top: 20vw;
+        left: 15vw;
+        z-index: 2;
+    }
+
+    .downloadText {
+        position: absolute;
+        font-size: 7vw;
+        width: 75vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 30vw;
+        left: 15vw;
+        z-index: 1;
+    }
+
+    .downloadText1 {
+        position: absolute;
+        font-size: 7vw;
+        width: 75vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 42.5vw;
+        left: 15vw;
+        z-index: 1;
+    }
+
+    .google1 {
+        position: absolute;
+        width: 30vw;
+        top: 55vw;
+        left: 50vw;
+        z-index: 1;
+    }
+    
+    .apple1 {
+        position: absolute;
+        width: 30vw;
+        top: 55vw;
+        left: 15vw;
+        z-index: 1;
+    }
+
+    .circleLine4 {
+        display: none;
+    }
+
+    .circleLine5 {
+        display: none;
+    }
+    
+    .circleLine6 {
+        display: none;
+    }
+
+    .circleLine7 {
+        display: none;
+    }
+
+    .phonebottom {
+        position: absolute;
+        width: 50vw;
+        height: 60vw;
+        top: 70vw;
+        left: 25vw;
+        z-index: 2;
+    }
+
+    .logoIcon1 {
+        position: absolute;
+        width: 9vw;
+        height: 12vw;
+        top: 92.5vw;
+        left: 51vw;
+        z-index: 2;
+    }
+    
+    .copyRightLine {
+        position: absolute;
+        width: 79.5vw;
+        border: 0.5px solid;
+        top: 135vw;
+        left: 11.5vw;
+        z-index: 1;
+    }
+
+    .copyRightText {
+        position: absolute;
+        font-size: 3.5vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 140vw;
+        left: 15vw;
+        z-index: 1;
+    }
+
+    .fanfanLogoAndTextEn {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 20vw;
+        height: 5vw;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+    
+    .fanfanFansTextEn {
+        position: absolute;
+        font-size: 3.5vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 52vw;
+        left: 33vw;
+        z-index: 1;
+    }
+    
+    .fanfanFansText1En {
+        position: absolute;
+        font-size: 3.5vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 57vw;
+        left: 30vw;
+        z-index: 1;
+    }
+
+    .detailTextEn {
+        position: absolute;
+        width: 85vw;
+        font-size: 2.5vw;
+        font-family: 'Noto Sans TC';
+        color: #989595;
+        top: 90vw;
+        left: 10vw;
+        z-index: 1;
+    }
+    
+    .exclusiveWithPlayerTextEn {
+        position: absolute;
+        width: 90vw;
+        font-size: 6vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 70vw;
+        left: 10vw;
+        z-index: 1;
+    }
+    
+    .exclusiveDetailTextEn {
+        position: absolute;
+        width: 80vw;
+        font-size: 2.5vw;
+        font-family: 'Noto Sans TC';
+        color: #989595;
+        top: 87.5vw;
+        left: 10vw;
+        z-index: 1;
+    }
+    
+    .downloadTextEn {
+        position: absolute;
+        font-size: 6vw;
+        width: 70vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 27.5vw;
+        left: 15vw;
+        z-index: 1;
+    }
+    
+    .downloadText1En {
+        position: absolute;
+        font-size: 6vw;
+        width: 70vw;
+        font-family: 'Noto Sans TC';
+        color: #262626;
+        top: 36vw;
+        left: 15vw;
+        z-index: 1;
+    }
+}
