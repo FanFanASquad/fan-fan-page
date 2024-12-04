@@ -1,4 +1,4 @@
-body {
+html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -684,6 +684,16 @@ body {
 }
 
 @media (max-width: 800px) {
+    html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    #en {
+        display: none;
+    }
 
     /* 第一區 */
     /* Fanfan Logo Text */
@@ -745,6 +755,15 @@ body {
         top: 52.5vw;
         left: 30vw;
         z-index: 1;
+    }
+
+    .orangeCircle {
+        background-color: #FF8C3B;
+        width: 50vw;
+        height: 50vw;
+        border-radius: 50%;
+        filter: blur(100px);
+        margin-right: -20vw;
     }
 
     .google {
@@ -1041,7 +1060,7 @@ body {
         left: 50vw;
         z-index: 1;
     }
-    
+
     .apple1 {
         position: absolute;
         width: 30vw;
@@ -1057,7 +1076,7 @@ body {
     .circleLine5 {
         display: none;
     }
-    
+
     .circleLine6 {
         display: none;
     }
@@ -1083,7 +1102,7 @@ body {
         left: 51vw;
         z-index: 2;
     }
-    
+
     .copyRightLine {
         position: absolute;
         width: 79.5vw;
@@ -1112,7 +1131,7 @@ body {
         margin-left: 4vw;
         margin-top: 2vw;
     }
-    
+
     .fanfanFansTextEn {
         position: absolute;
         font-size: 3.5vw;
@@ -1122,7 +1141,7 @@ body {
         left: 33vw;
         z-index: 1;
     }
-    
+
     .fanfanFansText1En {
         position: absolute;
         font-size: 3.5vw;
@@ -1143,7 +1162,7 @@ body {
         left: 10vw;
         z-index: 1;
     }
-    
+
     .exclusiveWithPlayerTextEn {
         position: absolute;
         width: 90vw;
@@ -1154,7 +1173,7 @@ body {
         left: 10vw;
         z-index: 1;
     }
-    
+
     .exclusiveDetailTextEn {
         position: absolute;
         width: 80vw;
@@ -1165,7 +1184,7 @@ body {
         left: 10vw;
         z-index: 1;
     }
-    
+
     .downloadTextEn {
         position: absolute;
         font-size: 6vw;
@@ -1176,7 +1195,7 @@ body {
         left: 15vw;
         z-index: 1;
     }
-    
+
     .downloadText1En {
         position: absolute;
         font-size: 6vw;
