@@ -421,7 +421,7 @@ body {
     display: flex;
     height: 100vh;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 /* 星星 */
@@ -604,12 +604,56 @@ body {
 /* Copyright 2024 FanFan all rights reserved */
 .copyRightText {
     position: absolute;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-family: 'Noto Sans TC';
     color: #262626;
     top: 42.5vw;
-    left: 35vw;
+    left: 10vw;
     z-index: 1;
+}
+
+.copyRightText1 {
+    position: absolute;
+    font-size: 1vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 42.5vw;
+    left: 62.5vw;
+    z-index: 1;
+}
+
+.copyRightText2 {
+    position: absolute;
+    font-size: 1vw;
+    font-family: 'Noto Sans TC';
+    top: 42.5vw;
+    left: 72.5vw;
+    z-index: 1;
+}
+
+.copyRightText3 {
+    position: absolute;
+    font-size: 1vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 42.5vw;
+    left: 86vw;
+    z-index: 1;
+}
+
+.copyRightText4 {
+    position: absolute;
+    font-size: 1vw;
+    font-family: 'Noto Sans TC';
+    color: #262626;
+    top: 42.5vw;
+    left: 86.5vw;
+    z-index: 1;
+}
+
+a {
+    color: #FF8C3B;
+    text-decoration: underline;
 }
 
 /* 英文 */
@@ -725,7 +769,7 @@ body {
         display: flex;
         height: 50vh;
         position: relative;
-        z-index: -1;
+        z-index: 0;
     }
 }
 
@@ -756,7 +800,7 @@ body {
         display: flex;
         height: 30vh;
         position: relative;
-        z-index: -1;
+        z-index: 0;
     }
 }
 
@@ -767,7 +811,7 @@ body {
         overflow-x: hidden;
         width: 100%;
     }
-    
+
     #en {
         display: none;
         margin: 0;
@@ -1076,7 +1120,7 @@ body {
         display: flex;
         height: 50vh;
         position: relative;
-        z-index: -1;
+        z-index: 0;
     }
 
     .star6 {
